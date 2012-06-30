@@ -10,10 +10,6 @@
 
 #import "FilterAttributeSlider.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -170,6 +166,39 @@
     }
     CGSize scaledImageSize = CGSizeMake(imageSize.width*imageScale, imageSize.height*imageScale);
     return CGRectMake(floorf(0.5f*(view.frame.size.width-scaledImageSize.width)), floorf(0.5f*(view.frame.size.height-scaledImageSize.height)), scaledImageSize.width, scaledImageSize.height);
+}
+
+
+
+
+#pragma mark - Picking Images
+
+- (IBAction) selectImage:(UIButton *) sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] initWithRootViewController:nil];
+        imagePicker.delegate = self;
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPad) {
+            imagePopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+            imagePopover.delegate = self;
+            [imagePopover presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
+    }
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    if (popoverController==imagePopover) {
+        imagePopover = nil;
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    [self displayImage:image];
+    [imagePopover dismissPopoverAnimated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
 }
 
 

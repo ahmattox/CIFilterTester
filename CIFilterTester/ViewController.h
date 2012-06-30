@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIPopoverControllerDelegate> {
     IBOutlet UIImageView *imageView;
     IBOutlet UIView *imageBorder;
     
@@ -21,8 +21,11 @@
     NSArray *filternames;
     
     NSMutableArray *attributeSliders;
+    
+    UIPopoverController *imagePopover;
 }
 
-- (IBAction) filterImage:(id)sender;
+- (IBAction) filterImage:(id) sender;
+- (IBAction) selectImage:(UIButton *) sender;
 
 @end
