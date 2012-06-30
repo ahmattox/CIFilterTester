@@ -16,6 +16,11 @@
 		9210DD58159F760F00FC3C5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD57159F760F00FC3C5A /* ViewController.m */; };
 		9210DD5B159F760F00FC3C5A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD59159F760F00FC3C5A /* ViewController_iPhone.xib */; };
 		9210DD5E159F760F00FC3C5A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD5C159F760F00FC3C5A /* ViewController_iPad.xib */; };
+		9210DD6C159F774500FC3C5A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9210DD6B159F774400FC3C5A /* CoreImage.framework */; };
+		9210DD6E159F77A700FC3C5A /* FilterAttributeSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */; };
+		9210DD6F159F77A700FC3C5A /* FilterAttributeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD66159F76E300FC3C5A /* FilterAttributeSlider.m */; };
+		9210DD70159F781C00FC3C5A /* FilterAttributeSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD67159F76E300FC3C5A /* FilterAttributeSlider.xib */; };
+		9210DD73159F784800FC3C5A /* baobabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD72159F784800FC3C5A /* baobabs.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +28,24 @@
 		9210DD44159F760F00FC3C5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9210DD46159F760F00FC3C5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9210DD48159F760F00FC3C5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9210DD4C159F760F00FC3C5A /* CIFilterTester-Info.plist */ = {isa = PBXFileReference; path = "CIFilterTester-Info.plist"; sourceTree = "<group>"; };
+		9210DD4C159F760F00FC3C5A /* CIFilterTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CIFilterTester-Info.plist"; sourceTree = "<group>"; };
 		9210DD4E159F760F00FC3C5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9210DD50159F760F00FC3C5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9210DD52159F760F00FC3C5A /* CIFilterTester-Prefix.pch */ = {isa = PBXFileReference; path = "CIFilterTester-Prefix.pch"; sourceTree = "<group>"; };
-		9210DD53159F760F00FC3C5A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9210DD52159F760F00FC3C5A /* CIFilterTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIFilterTester-Prefix.pch"; sourceTree = "<group>"; };
+		9210DD53159F760F00FC3C5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9210DD54159F760F00FC3C5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9210DD56159F760F00FC3C5A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		9210DD56159F760F00FC3C5A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9210DD57159F760F00FC3C5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9210DD5A159F760F00FC3C5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		9210DD5D159F760F00FC3C5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeSelector.m; sourceTree = "<group>"; };
+		9210DD66159F76E300FC3C5A /* FilterAttributeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeSlider.m; sourceTree = "<group>"; };
+		9210DD67159F76E300FC3C5A /* FilterAttributeSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterAttributeSlider.xib; sourceTree = "<group>"; };
+		9210DD68159F76E300FC3C5A /* CIFilterTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIFilterTester-Prefix.pch"; sourceTree = "<group>"; };
+		9210DD69159F76E300FC3C5A /* FilterAttributeSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterAttributeSelector.h; sourceTree = "<group>"; };
+		9210DD6A159F76E300FC3C5A /* FilterAttributeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterAttributeSlider.h; sourceTree = "<group>"; };
+		9210DD6B159F774400FC3C5A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		9210DD72159F784800FC3C5A /* baobabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baobabs.png; path = Resources/baobabs.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9210DD6C159F774500FC3C5A /* CoreImage.framework in Frameworks */,
 				9210DD45159F760F00FC3C5A /* UIKit.framework in Frameworks */,
 				9210DD47159F760F00FC3C5A /* Foundation.framework in Frameworks */,
 				9210DD49159F760F00FC3C5A /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +66,7 @@
 		9210DD35159F760F00FC3C5A = {
 			isa = PBXGroup;
 			children = (
+				9210DD71159F783700FC3C5A /* Resources */,
 				9210DD4A159F760F00FC3C5A /* CIFilterTester */,
 				9210DD43159F760F00FC3C5A /* Frameworks */,
 				9210DD41159F760F00FC3C5A /* Products */,
@@ -69,6 +84,7 @@
 		9210DD43159F760F00FC3C5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9210DD6B159F774400FC3C5A /* CoreImage.framework */,
 				9210DD44159F760F00FC3C5A /* UIKit.framework */,
 				9210DD46159F760F00FC3C5A /* Foundation.framework */,
 				9210DD48159F760F00FC3C5A /* CoreGraphics.framework */,
@@ -85,6 +101,7 @@
 				9210DD57159F760F00FC3C5A /* ViewController.m */,
 				9210DD59159F760F00FC3C5A /* ViewController_iPhone.xib */,
 				9210DD5C159F760F00FC3C5A /* ViewController_iPad.xib */,
+				9210DD64159F76D900FC3C5A /* FilterSelectors */,
 				9210DD4B159F760F00FC3C5A /* Supporting Files */,
 			);
 			path = CIFilterTester;
@@ -99,6 +116,27 @@
 				9210DD52159F760F00FC3C5A /* CIFilterTester-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9210DD64159F76D900FC3C5A /* FilterSelectors */ = {
+			isa = PBXGroup;
+			children = (
+				9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */,
+				9210DD66159F76E300FC3C5A /* FilterAttributeSlider.m */,
+				9210DD67159F76E300FC3C5A /* FilterAttributeSlider.xib */,
+				9210DD68159F76E300FC3C5A /* CIFilterTester-Prefix.pch */,
+				9210DD69159F76E300FC3C5A /* FilterAttributeSelector.h */,
+				9210DD6A159F76E300FC3C5A /* FilterAttributeSlider.h */,
+			);
+			name = FilterSelectors;
+			sourceTree = "<group>";
+		};
+		9210DD71159F783700FC3C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9210DD72159F784800FC3C5A /* baobabs.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +193,8 @@
 				9210DD4F159F760F00FC3C5A /* InfoPlist.strings in Resources */,
 				9210DD5B159F760F00FC3C5A /* ViewController_iPhone.xib in Resources */,
 				9210DD5E159F760F00FC3C5A /* ViewController_iPad.xib in Resources */,
+				9210DD70159F781C00FC3C5A /* FilterAttributeSlider.xib in Resources */,
+				9210DD73159F784800FC3C5A /* baobabs.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9210DD6E159F77A700FC3C5A /* FilterAttributeSelector.m in Sources */,
+				9210DD6F159F77A700FC3C5A /* FilterAttributeSlider.m in Sources */,
 				9210DD51159F760F00FC3C5A /* main.m in Sources */,
 				9210DD55159F760F00FC3C5A /* AppDelegate.m in Sources */,
 				9210DD58159F760F00FC3C5A /* ViewController.m in Sources */,
