@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    imageView.image = [UIImage imageNamed:@"baobabs.png"];
+    [self displayImageNamed:@"baobabs.png"];
     
     filternames = [CIFilter filterNamesInCategory:kCICategoryBuiltIn];
     
@@ -58,11 +58,8 @@
     [self applyFilter];
 }
 
-- (void) applyFilter {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"baobabs" ofType:@"png"];
-    NSURL *fileNameAndPath = [NSURL fileURLWithPath:filePath];
-    
-    CIImage *inputImage = [CIImage imageWithContentsOfURL:fileNameAndPath];
+- (void) applyFilter {    
+    CIImage *inputImage = [CIImage imageWithCGImage:sourceImage.CGImage];
     CIContext *context = [CIContext contextWithOptions:nil];
     
     CIFilter *filter = [CIFilter filterWithName:[filternames objectAtIndex:[filterPicker selectedRowInComponent:0]]];
@@ -139,6 +136,40 @@
             }
         }
     }
+}
+
+
+
+
+
+#pragma mark - Image Loading
+
+- (void) displayImageNamed:(NSString *) imageName {
+    [self displayImage:[UIImage imageNamed:imageName]];
+}
+
+- (void) displayImage:(UIImage *) image {
+    sourceImage = image;
+    imageView.image = sourceImage;
+    
+    CGRect imageFrame = [self centeredFrameForImage:sourceImage inView:imageView];
+    imageBorder.frame = CGRectMake(imageFrame.origin.x-5+imageView.frame.origin.x,
+                                   imageFrame.origin.y-5+imageView.frame.origin.y,
+                                   imageFrame.size.width+10,
+                                   imageFrame.size.height+10);
+}
+
+
+
+- (CGRect) centeredFrameForImage:(UIImage *) image inView:(UIView *) view {
+    CGRect maxImageFrame = imageView.frame;
+    CGSize imageSize = ((UIImage *)image).size;
+    CGFloat imageScale = fminf(maxImageFrame.size.width/imageSize.width, maxImageFrame.size.height/imageSize.height);
+    if (imageScale>1) {
+        return CGRectMake(view.frame.size.width/2-imageSize.width/2, view.frame.size.height/2-imageSize.height/2, imageSize.width, imageSize.height);
+    }
+    CGSize scaledImageSize = CGSizeMake(imageSize.width*imageScale, imageSize.height*imageScale);
+    return CGRectMake(floorf(0.5f*(view.frame.size.width-scaledImageSize.width)), floorf(0.5f*(view.frame.size.height-scaledImageSize.height)), scaledImageSize.width, scaledImageSize.height);
 }
 
 

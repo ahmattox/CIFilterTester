@@ -10,12 +10,15 @@
 
 @interface ViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
     IBOutlet UIImageView *imageView;
-    
-    NSArray *filternames;
+    IBOutlet UIView *imageBorder;
     
     IBOutlet UILabel *currentFilterName;
     IBOutlet UIView *paramaterView;
     IBOutlet UIPickerView *filterPicker;
+    
+    UIImage *sourceImage;
+    
+    NSArray *filternames;
     
     NSMutableArray *attributeSliders;
 }
