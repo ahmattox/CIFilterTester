@@ -8,6 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FilterAttributeSelector : NSObject
+@interface FilterAttributeSelector : NSObject {
+    UIView *view;
+    
+    NSString *attributeName;
+    NSDictionary *attribute;
+    
+    IBOutlet UILabel *label;
+}
+
+- (id) initWithAttribute:(NSDictionary *) anAttribute named:(NSString *) name;
+- (id) initWithFrame:(CGRect) frame andAttribute:(NSDictionary *) anAttribute named:(NSString *) name;
+
+- (NSString *) attributeKey;
+- (id) value;
+
+@property (nonatomic, strong) UIView *view;
 
 @end

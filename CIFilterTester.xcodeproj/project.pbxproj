@@ -18,9 +18,10 @@
 		9210DD5E159F760F00FC3C5A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD5C159F760F00FC3C5A /* ViewController_iPad.xib */; };
 		9210DD6C159F774500FC3C5A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9210DD6B159F774400FC3C5A /* CoreImage.framework */; };
 		9210DD6E159F77A700FC3C5A /* FilterAttributeSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */; };
-		9210DD6F159F77A700FC3C5A /* FilterAttributeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD66159F76E300FC3C5A /* FilterAttributeSlider.m */; };
-		9210DD70159F781C00FC3C5A /* FilterAttributeSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD67159F76E300FC3C5A /* FilterAttributeSlider.xib */; };
+		9210DD70159F781C00FC3C5A /* FilterAttributeSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD67159F76E300FC3C5A /* FilterAttributeSliderView.xib */; };
 		9210DD73159F784800FC3C5A /* baobabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD72159F784800FC3C5A /* baobabs.png */; };
+		9210DD7F159FA5BD00FC3C5A /* FilterAttributeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD7E159FA5BC00FC3C5A /* FilterAttributeSlider.m */; };
+		92C2A178159FBEE20032091D /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C2A177159FBEE20032091D /* icon-72.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +40,13 @@
 		9210DD5A159F760F00FC3C5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		9210DD5D159F760F00FC3C5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeSelector.m; sourceTree = "<group>"; };
-		9210DD66159F76E300FC3C5A /* FilterAttributeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeSlider.m; sourceTree = "<group>"; };
-		9210DD67159F76E300FC3C5A /* FilterAttributeSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterAttributeSlider.xib; sourceTree = "<group>"; };
-		9210DD68159F76E300FC3C5A /* CIFilterTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIFilterTester-Prefix.pch"; sourceTree = "<group>"; };
+		9210DD67159F76E300FC3C5A /* FilterAttributeSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterAttributeSliderView.xib; sourceTree = "<group>"; };
 		9210DD69159F76E300FC3C5A /* FilterAttributeSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterAttributeSelector.h; sourceTree = "<group>"; };
-		9210DD6A159F76E300FC3C5A /* FilterAttributeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterAttributeSlider.h; sourceTree = "<group>"; };
 		9210DD6B159F774400FC3C5A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		9210DD72159F784800FC3C5A /* baobabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baobabs.png; path = Resources/baobabs.png; sourceTree = "<group>"; };
+		9210DD7D159FA5BC00FC3C5A /* FilterAttributeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterAttributeSlider.h; sourceTree = "<group>"; };
+		9210DD7E159FA5BC00FC3C5A /* FilterAttributeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeSlider.m; sourceTree = "<group>"; };
+		92C2A177159FBEE20032091D /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +102,7 @@
 				9210DD57159F760F00FC3C5A /* ViewController.m */,
 				9210DD59159F760F00FC3C5A /* ViewController_iPhone.xib */,
 				9210DD5C159F760F00FC3C5A /* ViewController_iPad.xib */,
-				9210DD64159F76D900FC3C5A /* FilterSelectors */,
+				9210DD64159F76D900FC3C5A /* Filter Attribute Selectors */,
 				9210DD4B159F760F00FC3C5A /* Supporting Files */,
 			);
 			path = CIFilterTester;
@@ -118,22 +119,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9210DD64159F76D900FC3C5A /* FilterSelectors */ = {
+		9210DD64159F76D900FC3C5A /* Filter Attribute Selectors */ = {
 			isa = PBXGroup;
 			children = (
-				9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */,
-				9210DD66159F76E300FC3C5A /* FilterAttributeSlider.m */,
-				9210DD67159F76E300FC3C5A /* FilterAttributeSlider.xib */,
-				9210DD68159F76E300FC3C5A /* CIFilterTester-Prefix.pch */,
 				9210DD69159F76E300FC3C5A /* FilterAttributeSelector.h */,
-				9210DD6A159F76E300FC3C5A /* FilterAttributeSlider.h */,
+				9210DD65159F76E300FC3C5A /* FilterAttributeSelector.m */,
+				9210DD67159F76E300FC3C5A /* FilterAttributeSliderView.xib */,
+				9210DD7D159FA5BC00FC3C5A /* FilterAttributeSlider.h */,
+				9210DD7E159FA5BC00FC3C5A /* FilterAttributeSlider.m */,
 			);
-			name = FilterSelectors;
+			name = "Filter Attribute Selectors";
 			sourceTree = "<group>";
 		};
 		9210DD71159F783700FC3C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92C2A177159FBEE20032091D /* icon-72.png */,
 				9210DD72159F784800FC3C5A /* baobabs.png */,
 			);
 			name = Resources;
@@ -193,8 +194,9 @@
 				9210DD4F159F760F00FC3C5A /* InfoPlist.strings in Resources */,
 				9210DD5B159F760F00FC3C5A /* ViewController_iPhone.xib in Resources */,
 				9210DD5E159F760F00FC3C5A /* ViewController_iPad.xib in Resources */,
-				9210DD70159F781C00FC3C5A /* FilterAttributeSlider.xib in Resources */,
+				9210DD70159F781C00FC3C5A /* FilterAttributeSliderView.xib in Resources */,
 				9210DD73159F784800FC3C5A /* baobabs.png in Resources */,
+				92C2A178159FBEE20032091D /* icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9210DD6E159F77A700FC3C5A /* FilterAttributeSelector.m in Sources */,
-				9210DD6F159F77A700FC3C5A /* FilterAttributeSlider.m in Sources */,
 				9210DD51159F760F00FC3C5A /* main.m in Sources */,
 				9210DD55159F760F00FC3C5A /* AppDelegate.m in Sources */,
 				9210DD58159F760F00FC3C5A /* ViewController.m in Sources */,
+				9210DD7F159FA5BD00FC3C5A /* FilterAttributeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +333,7 @@
 				9210DD63159F760F00FC3C5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,14 +13,14 @@
     IBOutlet UIView *imageBorder;
     
     IBOutlet UILabel *currentFilterName;
-    IBOutlet UIView *paramaterView;
+    IBOutlet UIView *parameterView;
     IBOutlet UIPickerView *filterPicker;
     
     UIImage *sourceImage;
     
     NSArray *filternames;
     
-    NSMutableArray *attributeSliders;
+    NSMutableArray *attributeSelectors;
     
     UIPopoverController *imagePopover;
 }

@@ -48,7 +48,6 @@
 								<string key="NSFrame">{{20, 686}, {360, 37}}</string>
 								<reference key="NSSuperview" ref="367436770"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -264,14 +263,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">paramaterView</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="204335360"/>
-					</object>
-					<int key="connectionID">18</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">filterPicker</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="905558054"/>
@@ -293,6 +284,14 @@
 						<reference key="destination" ref="936519990"/>
 					</object>
 					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">parameterView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="204335360"/>
+					</object>
+					<int key="connectionID">31</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -446,7 +445,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">31</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -455,7 +454,7 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="filterImage:">id</string>
-						<string key="selectImage:">id</string>
+						<string key="selectImage:">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="filterImage:">
@@ -464,7 +463,7 @@
 						</object>
 						<object class="IBActionInfo" key="selectImage:">
 							<string key="name">selectImage:</string>
-							<string key="candidateClassName">id</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
@@ -472,7 +471,7 @@
 						<string key="filterPicker">UIPickerView</string>
 						<string key="imageBorder">UIView</string>
 						<string key="imageView">UIImageView</string>
-						<string key="paramaterView">UIView</string>
+						<string key="parameterView">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="currentFilterName">
@@ -491,8 +490,8 @@
 							<string key="name">imageView</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="paramaterView">
-							<string key="name">paramaterView</string>
+						<object class="IBToOneOutletInfo" key="parameterView">
+							<string key="name">parameterView</string>
 							<string key="candidateClassName">UIView</string>
 						</object>
 					</dictionary>
