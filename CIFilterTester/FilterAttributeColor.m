@@ -17,7 +17,7 @@
         
         view.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, view.bounds.size.height);
         
-        label.text = name;
+        label.text = displayName;
         
         [self updatePreviewColor];
     }

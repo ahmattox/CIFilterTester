@@ -17,7 +17,7 @@
         
         view.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, view.bounds.size.height);
         
-        label.text = name;
+        label.text = displayName;
 
         slider.minimumValue = [[attribute objectForKey:@"CIAttributeSliderMin"] floatValue];
         slider.maximumValue = [[attribute objectForKey:@"CIAttributeSliderMax"] floatValue];

@@ -12,6 +12,7 @@
     UIView *view;
     
     NSString *attributeName;
+    NSString *displayName;
     NSDictionary *attribute;
     
     IBOutlet UILabel *label;

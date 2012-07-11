@@ -19,6 +19,7 @@
     self = [super init];
     if (self) {
         attributeName = name;
+        displayName = [name stringByReplacingOccurrencesOfString:@"input" withString:@""];
         attribute = anAttribute;
     }
     return self;
