@@ -10,6 +10,7 @@
 
 #import "FilterAttributeSelector.h"
 #import "FilterAttributeSlider.h"
+#import "FilterAttributeColor.h"
 
 @implementation ViewController
 
@@ -122,6 +123,7 @@
             if ([[attribute objectForKey:@"CIAttributeClass"] isEqualToString:@"NSNumber"]) {
                 selector = [[FilterAttributeSlider alloc] initWithFrame:CGRectMake(0, parameterHeight, parameterView.bounds.size.width, 65) andAttribute:attribute named:attributeKey];
             } else if ([[attribute objectForKey:@"CIAttributeClass"] isEqualToString:@"CIColor"]) {
+                selector = [[FilterAttributeColor alloc] initWithFrame:CGRectMake(0, parameterHeight, parameterView.bounds.size.width, 65) andAttribute:attribute named:attributeKey];
             }
             if (selector) {
                 [parameterView addSubview:selector.view];
