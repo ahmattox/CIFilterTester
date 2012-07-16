@@ -21,6 +21,8 @@
 		9210DD70159F781C00FC3C5A /* FilterAttributeSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD67159F76E300FC3C5A /* FilterAttributeSliderView.xib */; };
 		9210DD73159F784800FC3C5A /* baobabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 9210DD72159F784800FC3C5A /* baobabs.png */; };
 		9210DD7F159FA5BD00FC3C5A /* FilterAttributeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9210DD7E159FA5BC00FC3C5A /* FilterAttributeSlider.m */; };
+		9270BF8815B4A1A800FB7E61 /* FilterAttributeVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 9270BF8715B4A1A800FB7E61 /* FilterAttributeVector.m */; };
+		9270BF8B15B4A21B00FB7E61 /* FilterAttributeVectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9270BF8A15B4A21B00FB7E61 /* FilterAttributeVectorView.xib */; };
 		92C2A178159FBEE20032091D /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C2A177159FBEE20032091D /* icon-72.png */; };
 		92EE103415AD6FEF00AA4906 /* FilterAttributeColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92EE103315AD6FEF00AA4906 /* FilterAttributeColorView.xib */; };
 		92EE103815AD701700AA4906 /* FilterAttributeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE103715AD701700AA4906 /* FilterAttributeColor.m */; };
@@ -48,6 +50,9 @@
 		9210DD72159F784800FC3C5A /* baobabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baobabs.png; path = Resources/baobabs.png; sourceTree = "<group>"; };
 		9210DD7D159FA5BC00FC3C5A /* FilterAttributeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterAttributeSlider.h; sourceTree = "<group>"; };
 		9210DD7E159FA5BC00FC3C5A /* FilterAttributeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeSlider.m; sourceTree = "<group>"; };
+		9270BF8615B4A1A800FB7E61 /* FilterAttributeVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterAttributeVector.h; sourceTree = "<group>"; };
+		9270BF8715B4A1A800FB7E61 /* FilterAttributeVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterAttributeVector.m; sourceTree = "<group>"; };
+		9270BF8A15B4A21B00FB7E61 /* FilterAttributeVectorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterAttributeVectorView.xib; sourceTree = "<group>"; };
 		92C2A177159FBEE20032091D /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		92EE103315AD6FEF00AA4906 /* FilterAttributeColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterAttributeColorView.xib; sourceTree = "<group>"; };
 		92EE103615AD701700AA4906 /* FilterAttributeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterAttributeColor.h; sourceTree = "<group>"; };
@@ -135,6 +140,9 @@
 				92EE103315AD6FEF00AA4906 /* FilterAttributeColorView.xib */,
 				92EE103615AD701700AA4906 /* FilterAttributeColor.h */,
 				92EE103715AD701700AA4906 /* FilterAttributeColor.m */,
+				9270BF8A15B4A21B00FB7E61 /* FilterAttributeVectorView.xib */,
+				9270BF8615B4A1A800FB7E61 /* FilterAttributeVector.h */,
+				9270BF8715B4A1A800FB7E61 /* FilterAttributeVector.m */,
 			);
 			name = "Filter Attribute Selectors";
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				9210DD73159F784800FC3C5A /* baobabs.png in Resources */,
 				92C2A178159FBEE20032091D /* icon-72.png in Resources */,
 				92EE103415AD6FEF00AA4906 /* FilterAttributeColorView.xib in Resources */,
+				9270BF8B15B4A21B00FB7E61 /* FilterAttributeVectorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +231,7 @@
 				9210DD58159F760F00FC3C5A /* ViewController.m in Sources */,
 				9210DD7F159FA5BD00FC3C5A /* FilterAttributeSlider.m in Sources */,
 				92EE103815AD701700AA4906 /* FilterAttributeColor.m in Sources */,
+				9270BF8815B4A1A800FB7E61 /* FilterAttributeVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

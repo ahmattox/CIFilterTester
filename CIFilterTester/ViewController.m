@@ -11,6 +11,7 @@
 #import "FilterAttributeSelector.h"
 #import "FilterAttributeSlider.h"
 #import "FilterAttributeColor.h"
+#import "FilterAttributeVector.h"
 
 @implementation ViewController
 
@@ -130,6 +131,9 @@
                 selector = [[FilterAttributeSlider alloc] initWithFrame:CGRectMake(0, parameterHeight, parameterView.bounds.size.width, 65) andAttribute:attribute named:attributeKey];
             } else if ([[attribute objectForKey:@"CIAttributeClass"] isEqualToString:@"CIColor"]) {
                 selector = [[FilterAttributeColor alloc] initWithFrame:CGRectMake(0, parameterHeight, parameterView.bounds.size.width, 65) andAttribute:attribute named:attributeKey];
+            } else if ([[attribute objectForKey:@"CIAttributeClass"] isEqualToString:@"CIVector"]) {
+                selector = [[FilterAttributeVector alloc] initWithFrame:CGRectMake(0, parameterHeight, parameterView.bounds.size.width, 65) andAttribute:attribute named:attributeKey];
+                [((FilterAttributeVector *) selector) setImageSize:sourceImage.size];
             }
             if (selector) {
                 [parameterView addSubview:selector.view];
@@ -201,6 +205,11 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     [self displayImage:image];
     [imagePopover dismissPopoverAnimated:YES];
+    for (id attribute in attributeSelectors) {
+        if ([attribute respondsToSelector:@selector(setImageSize:)]) {
+            [attribute setImageSize:image.size];
+        }
+    }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
