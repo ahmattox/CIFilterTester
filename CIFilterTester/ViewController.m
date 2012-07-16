@@ -28,8 +28,8 @@
     
     filternames = [CIFilter filterNamesInCategory:kCICategoryBuiltIn];
     
-    [filterPicker selectRow:5 inComponent:0 animated:YES];
-    [self pickerView:filterPicker didSelectRow:5 inComponent:0];
+    [filterPicker selectRow:11 inComponent:0 animated:YES];
+    [self pickerView:filterPicker didSelectRow:11 inComponent:0];
 }
 
 - (void)viewDidUnload {
@@ -41,8 +41,11 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
     } else {
-        return YES;
+        if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
+            return YES;
+        }
     }
+    return NO;
 }
 
 
@@ -61,15 +64,18 @@
     CIContext *context = [CIContext contextWithOptions:nil];
     
     CIFilter *filter = [CIFilter filterWithName:[filternames objectAtIndex:[filterPicker selectedRowInComponent:0]]];
-    [filter setValue:inputImage forKey:kCIInputImageKey];
+    
+    if ([[filter attributes] objectForKey:@"inputImage"]) {
+        [filter setValue:inputImage forKey:kCIInputImageKey];
+    }
+    
     for (FilterAttributeSelector *selector in attributeSelectors) {
         [filter setValue:selector.value forKey:selector.attributeKey];
     }
     
     CIImage *outputImage = [filter outputImage];
     
-    CGImageRef cgimg = 
-    [context createCGImage:outputImage fromRect:[outputImage extent]];
+    CGImageRef cgimg = [context createCGImage:outputImage fromRect:[outputImage extent]];
     UIImage *newImg = [UIImage imageWithCGImage:cgimg];
     
     [imageView setImage:newImg];
