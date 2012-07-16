@@ -14,6 +14,7 @@
     
     IBOutlet UILabel *currentFilterName;
     IBOutlet UIView *parameterView;
+    IBOutlet UIScrollView *parameterScrollView;
     IBOutlet UIPickerView *filterPicker;
     
     UIImage *sourceImage;

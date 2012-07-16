@@ -142,6 +142,8 @@
             }
         }
     }
+    parameterView.frame = CGRectMake(parameterView.frame.origin.x, parameterView.frame.origin.y, parameterView.bounds.size.width, parameterHeight);
+    parameterScrollView.contentSize = CGSizeMake(parameterScrollView.bounds.size.width, parameterView.frame.origin.y+parameterView.bounds.size.height);
 }
 
 
