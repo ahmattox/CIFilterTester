@@ -49,7 +49,6 @@
 								<string key="NSFrame">{{20, 696}, {360, 37}}</string>
 								<reference key="NSSuperview" ref="367436770"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -131,14 +130,14 @@
 									<object class="IBUIView" id="130436407">
 										<reference key="NSNextResponder" ref="748994490"/>
 										<int key="NSvFlags">290</int>
-										<string key="NSFrame">{{20, 69}, {360, 377}}</string>
+										<string key="NSFrame">{{20, 70}, {360, 396}}</string>
 										<reference key="NSSuperview" ref="748994490"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="144679636"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
-										<object class="NSColor" key="IBUIBackgroundColor">
+										<object class="NSColor" key="IBUIBackgroundColor" id="609314662">
 											<int key="NSColorSpace">3</int>
-											<bytes key="NSWhite">MCAwAA</bytes>
+											<bytes key="NSWhite">MAA</bytes>
 										</object>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 									</object>
@@ -159,10 +158,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="905558054"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="609314662">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="609314662"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<object class="IBUIView" id="617176527">
