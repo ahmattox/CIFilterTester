@@ -10,8 +10,7 @@
 
 @interface FilterAttributeVector : FilterAttributeSelector {
     IBOutlet UILabel *valueLabel;
-    IBOutlet UISlider *slider1;
-    IBOutlet UISlider *slider2;
+    IBOutletCollection(UISlider) NSMutableArray *sliders;
     
     CGSize imageSize;
 }

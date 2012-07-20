@@ -109,11 +109,9 @@
 
 #pragma mark Delegate
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"picker selected row");
-    
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {    
     NSDictionary *filterAttributes = [[CIFilter filterWithName:[filternames objectAtIndex:row]] attributes];
-    NSLog(@"filter attributes = %@", filterAttributes);
+    //NSLog(@"filter attributes = %@", filterAttributes);
     
     currentFilterName.text = [filterAttributes objectForKey:@"CIAttributeFilterDisplayName"];
     
